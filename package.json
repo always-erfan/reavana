@@ -1,0 +1,12 @@
+{
+  "name": "reavana",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "infra:up": "docker compose --env-file infra/.env -f infra/docker-compose.dev.yml up -d",
+    "infra:down": "docker compose --env-file infra/.env -f infra/docker-compose.dev.yml down"
+  }
+}
